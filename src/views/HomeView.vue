@@ -9,31 +9,34 @@ export default {
       screenwidthHere:window.innerWidth,
       en: [
         "Welcome to Swemount! We are a company specializing in the sale and installation of solar cell systems and parts. Our team of trained professionals is dedicated to providing top-quality products and services to help our customers save energy and reduce their carbon footprint. Whether you are a homeowner looking to switch to solar power or a business owner interested in incorporating renewable energy into your operations, we have the expertise and resources to help you reach your goals. Contact us today to learn more about how we can support your transition to solar energy!",
-        `Solar cells are devices that convert light energy into electricity. They are an important part of many clean energy systems because they provide a reliable and renewable source of power.
+        `With Swemounts' systems, you are sure to get a stable and secure installation of your solar panels.
 
-One of the main advantages of solar cells is that they generate electricity from an abundant and free source of energy: sunlight. Solar cells do not produce any air pollution or greenhouse gases, and they can be used in a variety of applications, from powering small electronic devices to providing electricity for entire communities.
+By using the innovative material Zinc/Magnesium ZM310, you get products with excellent corrosion resistance and the ability to mount in exposed locations. The systems have undergone careful calculations and testing to withstand tough weather conditions such as strong winds and heavy snow loads.
 
-Solar cells are made of semiconductor materials, such as silicon, that absorb photons of light and release electrons. When these electrons are captured, they create a flow of electricity. Solar cells are typically connected together in a panel or array, which can be mounted on a roof, a wall, or the ground.
+Swemounts' free software for project design and calculation makes it easy to plan and execute your solar panel installation project.
 
-There are several different types of solar cells, including monocrystalline, polycrystalline, and thin-film. Monocrystalline solar cells are made from a single crystal of silicon and are typically the most efficient at converting sunlight into electricity. Polycrystalline solar cells are made from multiple crystals of silicon and are slightly less efficient. Thin-film solar cells are made from a thin layer of photovoltaic material and are the least efficient, but also the least expensive to manufacture.
+With Swemounts' systems, the installation becomes easy and efficient. You get a few and easy-to-use components, as well as fast delivery directly to the installation site. Swemount offers various solutions for varying needs.
 
-The efficiency of a solar cell refers to how much of the sunlight that it absorbs is converted into electricity. Currently, the average efficiency of a solar cell is around 20%, but some experimental cells have achieved efficiencies as high as 50%.
+Swemount also cares about the environment. The products are manufactured using an energy-efficient machine park and work towards becoming climate-neutral.
 
-Overall, solar cells are a promising technology for generating clean, renewable energy. While there are still some challenges to overcome, such as finding cost-effective ways to store excess energy and improving the efficiency of solar cells, they have the potential to play a significant role in the transition to a low-carbon future.`,
+Choose Swemount and get a reliable and sustainable solution for mounting solar panels.`,
       ],
       se: [
         "Swemount erbjuder innovativa och enkla lösningar av hög kvalitet för montering av solcellspaneler. Vi erbjuder stålprodukter med den optimala ytbehandlingen för våra svenska klimat. Vi lämnar 30 års garanti på samtliga av våra standard produkter för underkonstruktioner.",
-        `Solceller är enheter som omvandlar ljusenergi till el. De är en viktig del av många ren energi system eftersom de ger en pålitlig och förnybar källa till ström.
-        
-En av de främsta fördelarna med solceller är att de genererar el från en riklig och gratis källa till energi: solljus. Solceller släpper inte ut någon luftföroreningar eller växthusgaser, och de kan användas i en mängd olika tillämpningar, från att driva små elektroniska enheter till att tillhandahålla el för hela samhällen.
+        `Med Swemounts system är du säker på att få en stabil och säker installation av dina solceller. 
 
-Solceller tillverkas av halvledarmaterial, såsom silicium, som absorberar foton av ljus och släpper ut elektroner. När dessa elektroner fångas in, skapar de en ström av el. Solceller är oftast anslutna till varandra i en panel eller array, som kan monteras på ett tak, en vägg eller marken.
+Genom att använda det innovativa materialet Zink/Magnesium ZM310 får du produkter med utmärkt korrosionsbeständighet och möjlighet att montera på utsatta ställen.
+Systemen har genomgått noggranna beräkningar och tester för att klara tuffa väderförhållanden såsom hård vind och tung snöbelastning.
 
-Det finns flera olika typer av solceller, inklusive monokristallina, polykristallina och tunnfilms solceller. Monokristallina solceller tillverkas av en enda kristall av silicium och är oftast mest effektiva vid omvandling av solljus till el. Polykristallina solceller tillverkas av flera kristaller av silicium och är något mindre effektiva. Tunnfilms solceller tillverkas av en tunn skikt av fotovoltaiskt material och är minst effektiva, men också minst kostnadseffektiva att tillverka.
+Swemounts gratis programvara för projektutformning och beräkning blir det enkelt att planera och genomföra ditt solcellsmontageprojekt.
 
-Effektiviteten hos en solcell avser hur mycket av det solljus som den absorberar som omvandlas till el. För närvarande är genomsnittseffektiviteten hos en solcell runt 20%, men vissa experimentella celler har uppnått effektiviteter på så mycket som 50%.
+Med Swemounts system blir montaget enkelt och effektivt. 
+Du får få och lättanvända detaljer, samt snabb leverans direkt till montageplatsen. 
+Swemount erbjuder olika lösningar för varierande behov
 
-Sammanfattningsvis är solceller en lovande teknik för att generera ren, förnybar energi. Även om det fortfarande finns vissa utmaningar att övervinna, såsom att hitta kostnadseffektiva sätt att lagra överskott av energi och förbättra effektiviteten hos solceller, har de potential att spela en viktig roll i övergången till en lågkarbon framtid.`,
+Swemount tänker också på miljön. Produkterna tillverkas med hjälp av en energisnål maskinpark och jobbar för att bli klimatneutrala. 
+
+Välj Swemount och få en pålitlig och hållbar lösning för montage av solceller.`,
 
       ],
     };
@@ -52,18 +55,18 @@ Sammanfattningsvis är solceller en lovande teknik för att generera ren, förny
       <div class="head-text" ><h1 class="" >Swemount</h1>
 <p class="white"> Swemount erbjuder innovativa och enkla lösningar med hög kvalitet för montering av solcellspaneler. Alla våra system är utvecklade i Sverige, med fokus på varje detalj.
 Registrera dig och ta del av vår kalkylator för snö & vindlastberäkningar, eller kontakta oss för en skräddarsydd offert.</p>
-<button> <a class=" " href="/contact" style=""> {{ langIsSe? "Kontakta oss": "Contact us" }}</a></button>
+ <a class="a-button" href="/contact" style=""> {{ langIsSe? "Kontakta oss": "Contact us" }}</a>
 </div></div>
 
 
-<video class="bg-video" src="../assets/swemountvideo.mp4" muted autoplay loop></video>
+ <video class="bg-video" src="../assets/swemountvideo.mp4" muted autoplay loop></video>
 
 
 
 
-<!--      <iframe :style="{'transform':'scale(' + screenwidthHere*0.00078125 + ');'}"  src="https://www.youtube.com/embed/a2PPSjazcs8?&loop=1&controls=0&autoplay=1&mute=1&playsinline=1&loop=1&showinfo=0&autohide=1&playlist=a2PPSjazcs8"  title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+    <!-- <iframe class="bg-video" :style="{'transform':'scale(' + screenwidthHere*0.00078125 + ');'}"  src="https://www.youtube.com/embed/iUtYNfyG18M?&autoplay=1&loop=1&controls=0&mute=1&playsinline=1&loop=1&showinfo=0&autohide=1&playlist=iUtYNfyG18M"  title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
    -->
-  
+   
   </div>
 
 
@@ -74,25 +77,27 @@ Registrera dig och ta del av vår kalkylator för snö & vindlastberäkningar, e
 
           <p  class=" lines-included white" >{{ langIsSe? se[0]: en[0] }}</p>
         </div>
-        <img class="img-home" src="/img/swemount9.png" alt="" />
+        <img class="img-home" src="/img/swemount9.jpg" alt="" />
       </div>
     </div>
 
 <div class="home-article2" style="max-width: 1200px;">
-  <h2 class="yellow h2-home" style="text-align:center;">{{ langIsSe? "Produktnyheter": "Produktnyheter" }}</h2>
-<div style="display: flex; align-items: center; justify-content: space-between;">
-  <div> <img src="/img/swemount10.png" alt=""><h3>SM Roof hook RH2000</h3> <p></p></div>
-  <div><img src="/img/swemount11.png" alt=""><h3>Guardian Fall Protection Roof Anchor</h3></div>
-  <div><img src="/img/swemount12.png" alt=""><h3>DBI-SALA Roof Anchor</h3></div>
+ <!-- <h2 class="yellow h2-home" style="text-align:center;">{{ langIsSe? "Produktnyheter": "Produktnyheter" }}</h2>-->
+<div class="news-part" style="display: flex; align-items: center; justify-content: space-between;">
+  <!--<div> <img src="/img/swemount10.png" alt=""><h3>SM Roof hook RH2000</h3> <p></p></div>-->
+  <div><img src="/img/swemount18.jpg" alt=""><!--<h3>Guardian Fall Protection Roof Anchor</h3>--></div>
+     <iframe class="video-present" src="https://www.youtube.com/embed/iUtYNfyG18M?&loop=1&playlist=iUtYNfyG18M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+  <div><img src="/img/swemount19.jpg" alt=""><!--<h3>DBI-SALA Roof Anchor</h3>--></div>
 </div>
 </div>
 
     <div class="home-article3">
       <div style="display: flex; align-items: center; max-width: 1200px;">
-        <img class="img-home" src="/img/swemount3.png" alt="" />
+        <img class="img-home" src="/img/swemount20.jpg" alt="" />
 
         <div class="p-text">
-          <h2 class="white h2-home">{{ langIsSe? "Varför Solceller?": "Why Solar cells?" }}</h2>
+          <h2 class="white h2-home">{{ langIsSe? "Varför ska du välja swemounts fästsystem ?": "Why should you choose Swemounts mounting systems?" }}</h2>
 
           <p  class=" lines-included" >{{ langIsSe? se[1]: en[1] }}</p>
         </div>

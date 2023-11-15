@@ -1,4 +1,4 @@
-<script >
+<script>
 export default {
   props:{
     langIsSe:Boolean,
@@ -7,46 +7,72 @@ export default {
   data() {
     return {
       en:[
-        `Swemount is a company that helps property owners become more sustainable by installing solar panels on their roofs. Our team of experts carefully assess the suitability of solar panel installation on each building and work with property owners to design a custom solar panel system that meets their energy needs and budget.
+      `Swemount is a company that helps property owners become more sustainable by installing solar panels on their roofs. Our team of experts carefully assesses the suitability for solar panel installation on each building and works with property owners to design a customized solar panel system that meets their energy needs and budget.
 
-When the solar panel system is installed, property owners can begin producing their own renewable energy, which not only helps the environment but also saves them money on their energy bills. In addition, property owners can take advantage of various government incentives and tax reductions for switching to solar energy.
+Once the solar panel system is installed, property owners can start producing their own renewable energy, which not only helps the environment but also saves them money on their energy bills.
 
-At Swemount, we are proud to offer high-quality solar panel products and excellent customer service. We are committed to helping property owners reduce their carbon dioxide emissions and achieve energy independence.`
-],
-      se:[
-      `Swemount är en företag som hjälper fastighetsägare att bli mer hållbara genom att installera solceller på deras tak. Vårt team av experter bedömer noggrant lämpligheten för solpanelinstallation på varje byggnad och samarbetar med fastighetsägare för att designa en skräddarsydd solpanelanläggning som möter deras energibehov och budget. 
+At Swemount, we are proud to offer high-quality solar panel products and excellent customer service. We are committed to helping property owners reduce their carbon emissions and achieve energy independence.],
+`
+],      
+se:[
+      `Swemount är en företag som hjälper fastighetsägare att bli mer hållbara genom att installera solceller på deras tak. 
+Vårt team av experter bedömer noggrant lämpligheten för solpanelinstallation på varje byggnad och samarbetar med fastighetsägare för att designa en skräddarsydd solpanelanläggning som möter deras energibehov och budget. 
 
-När solpanelanläggningen är installerad kan fastighetsägarna börja producera sin egen förnybar energi, vilket inte bara hjälper miljön utan också sparar dem pengar på deras energiräkningar. Dessutom kan fastighetsägare ta del av olika regeringsstöd och skattereduktioner för att gå över till solenergi. 
+När solpanelanläggningen är installerad kan fastighetsägarna börja producera sin egen förnybar energi, vilket inte bara hjälper miljön utan också sparar dem pengar på deras energiräkningar. 
 
-På Swemount är vi stolta över att erbjuda högkvalitativa solpanelprodukter och utmärkt kundservice. Vi är angelägna om att hjälpa fastighetsägare att minska sina koldioxidutsläpp och uppnå energisjälvständighet.`
+På Swemount är vi stolta över att erbjuda högkvalitativa solpanelprodukter och utmärkt kundservice. Vi är angelägna om att hjälpa fastighetsägare att minska sina koldioxidutsläpp och uppnå energisjälvständighet.
+`
 
       ],
       QA: [
         {
           Q: "Vad är det för typ av montagesystem som ni erbjuder?",
-          A: "Vi använder oss av magnelis behandlat stål, för att förbättra plåtens motståndskraft mot korrosion. Magnelis är en speciell blandning av zinkplåt och 3,5% aluminium, samt 3% magnesium. Dessa tillsatser ger plåten mycket bra korrosionsskydd.",
+          A: `Våra montagesystem har utformats för att vara användbara för ett brett utbud av takmaterial. 
+De är kompatibla med tegel/betongpannor, papp eller falsad plåt och gör det möjligt för dig att montera solpaneler på ett säkert och effektivt sätt.`,
           active: false,
         },
         {
           Q: "Finns det några begränsningar på vilken sorts solceller som kan användas med ert montagesystem?",
-          A: "Vi använder oss av magnelis behandlat stål, för att förbättra plåtens motståndskraft mot korrosion. Magnelis är en speciell blandning av zinkplåt och 3,5% aluminium, samt 3% magnesium. Dessa tillsatser ger plåten mycket bra korrosionsskydd.",
+          A: `Med Swemounts montagesystem kan du vara säker på att de passar alla nuvarande typer av solceller och solpaneler. 
+Vi har utvecklat våra system för att vara kompatibla med det allra senaste på marknaden, så att du kan få mest möjliga utbyte av ditt solenergisystem.
+`
+,
           active: false,
         },
         {
           Q: "Hur lång livslängd har eran montagesystem och finns det några garantier?",
-          A: "Vårt montagesystem kommer med 30 års garantimot korrision. Erbjuder ni teknisk support under installationen och/eller efteråt? Vid frågor är du mer än välkommen att kontakta oss för support och frågor, alternativt ladda ner någon av våra montage guider.",
+          A: `30 års garanti.
+Med oss kan du känna dig trygg och säker när du väljer ett montagesystem för dina solceller. 
+Företaget lämnar full garanti på hela systemet som levereras från oss, så du kan vara säker på att ditt system kommer att fungera i många år framöver.
+`
+,
           active: false,
         },
         {
           Q: "Erbjuder ni teknisk support under installationen och/eller efteråt?",
-          A: "Vid frågor är du mer än välkommen att kontakta oss för support och frågor, alternativt ladda ner någon av våra montage guider.",
+          A: `Vid frågor är du mer än välkommen att kontakta oss för support och frågor, alternativt ladda ner någon av våra montageanvisning.`,
           active: false,
         },
       ],
+      subject:"",
+      name:"",
+      email:"",
+      message:"",
+
     };
   },
   methods: {
+    sendEmail() {
+      const mailtoLink = "mailto:info@swemount.com" + "?subject=" + encodeURIComponent(this.subject) + "&body=" + encodeURIComponent("Name: " + this.name  + "\n\n" + this.message);
+      window.location.href = mailtoLink;
+    },
+
+
+
+
   },
+
+
 };
 </script>
 
@@ -56,6 +82,15 @@ På Swemount är vi stolta över att erbjuda högkvalitativa solpanelprodukter o
 
     <h1>Support</h1>
 <p class="start-text lines-included">{{ langIsSe? se[0]: en[0] }} </p>
+<div class="second-head"> 
+        <h1>{{ langIsSe? "Dokument" : "Documents" }}</h1>
+   <hr>
+  </div>
+<ul class="doks">
+  <RouterLink to="/products" class="li-route">   {{ langIsSe? "Montering" : "Mounting" }}  </RouterLink>
+  <RouterLink to="/products" class="li-route">  {{ langIsSe? "Produkter" : "Products" }}  </RouterLink>
+  <RouterLink to="/products" class="li-route">  {{ langIsSe? "Garanti" : "Guarantee" }}  </RouterLink>
+</ul>
 
 <div class="second-head"> 
         <h1>F&Q</h1>
@@ -72,7 +107,7 @@ På Swemount är vi stolta över att erbjuda högkvalitativa solpanelprodukter o
           ]">{{ i.Q }}</p>
 
           <Transition name="slide-fade">
-            <p class="ans"  v-if="i.active">{{ i.A }}</p>
+            <p class="ans lines-included"  v-if="i.active">{{ i.A }}</p>
           </Transition>
         </div>
       </li>
@@ -83,14 +118,15 @@ På Swemount är vi stolta över att erbjuda högkvalitativa solpanelprodukter o
    <hr>
   </div>
 
+    <form @submit.prevent="sendEmail">
 
-    <form action="mailto:info@swemount.se" method="POST" enctype="text/plain" >
+<!--    <form action="mailto:info@swemount.com" method="POST" enctype="text/plain" > -->
 
-      <label for="email"><p>Eamil:</p><input type="email" name="email" placeholder="anders.andersson@gmail.com" required></label>
-      <label for="name"><p>{{ langIsSe? "Namn": "Name" }}:</p><input type="text" name="name" placeholder="Anders Andersson" required></label>
-      <label for="subject"><p>Subject:</p><input type="text" name="subject" placeholder="subject" required></label>
+      <!-- <label for="email"><p>Eamil:</p><input type="email" name="email" v-model="email" placeholder="anders.andersson@gmail.com" required></label>-->
+      <label for="name"><p>{{ langIsSe? "Namn": "Name" }}:</p><input type="text" name="name" v-model="name" placeholder="Anders Andersson" required></label>
+      <label for="subject"><p>Subject:</p><input type="text" name="subject" v-model="subject" placeholder="subject" required></label>
 
-      <label for="message"><p>{{ langIsSe? "Fråga": "Question" }}:</p>  <textarea name="message"  required ></textarea>
+      <label for="message"><p>{{ langIsSe? "Fråga": "Question" }}:</p>  <textarea name="message" v-model="message"  required ></textarea>
 
 </label>
 

@@ -9,7 +9,7 @@ export default {
 
   data() {
     return {
-      rootBrach:"/swemounttest",
+      rootBrach:"",
       products:picsrc.productsinfo,
     };
   },

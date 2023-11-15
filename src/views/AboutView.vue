@@ -1,9 +1,10 @@
 <script>
-var rootBrach = "/swemounttest";
+var rootBrach = ""; ///swemounttest
 
 export default {
   props:{
     langIsSe:Boolean,
+    
   },
   data() {
     return {
@@ -14,8 +15,7 @@ export default {
             lat: 57.69862519804575,
             lng: 14.468818086508398,
           }
-        }
-        , // Along list of clusters
+        }, // Along list of clusters
       ],
       en: [
         "Swemount is a Swedish company that specializes in manufacturing high-quality mounting systems for solar panels. Our products are suitable for both large and small solar panel installations and have many different options to choose from, so customers can find the mounting system that best meets their needs.",
@@ -37,21 +37,21 @@ export default {
           title: "Order",
           name: "Henrik Lidhamn",
           phone: "0700000000",
-          email: "Henke@swemount.se",
+          email: "henrik@swemount.se",
           pic: `${rootBrach}/personal/Henke1.jpg`,
         },
         {
           title: "Marknad",
           name: "Ulf Thorwalls ",
           phone: "0700000000",
-          email: "Ulf@swemount.se",
+          email: "ulf@swemount.se",
           pic: `${rootBrach}/personal/Ulf1.jpg`,
         },
         {
           title: "Försäljning",
           name: "Tobias Axelsson ",
           phone: "0700000000",
-          email: "Tobias@swemount.se",
+          email: "tobias@swemount.se",
           pic: `${rootBrach}/per-placeholder.png`,
         },
       ],
@@ -85,7 +85,7 @@ export default {
         <br />
         <p class="">{{ langIsSe? se[1]: en[1] }}</p>
       </div>
-      <img  class="img-home img-back-box" src="/img/swemount1.png" alt="" />
+      <img  class="img-home img-back-box" src="/img/swemount21.jpg" alt="" />
     </div>
 
     <div class="team">
@@ -108,7 +108,7 @@ export default {
             <p class="business-card-name bold-font">   {{ i.name }}</p>
 
           <p class="business-card-title yellow bold-font">  {{ i.title }}</p>
-          <p class="business-card-icons bold-font"><i class="fa-solid fa-phone yellow"></i> &nbsp;&nbsp; {{ i.phone }}</p>
+          <!--<p class="business-card-icons bold-font"><i class="fa-solid fa-phone yellow"></i> &nbsp;&nbsp; {{ i.phone }}</p>-->
           <p class="business-card-icons bold-font"><i class="fa-solid fa-envelope-open yellow"></i> &nbsp;&nbsp; <a class="bold-font" :href="'mailto:'+i.email" >{{ i.email }}</a></p>
         </div>
         </div>
@@ -136,8 +136,11 @@ export default {
    fullscreenControl: false,
    disableDefaultUi: true
  }"
-
   >
+
+  <!--          url: "/swemounttest/logomarker.png",
+-->
+
   <GMapMarker
           :key="index"
           v-for="(m, index) in markers"
@@ -145,7 +148,7 @@ export default {
           :clickable="true"
           :draggable="false"
           :icon= '{
-          url: "/swemounttest/logomarker.png",
+          url: "/logomarker.png",
           scaledSize: {width: 60, height: 60},
           labelOrigin: {x: 16, y: -10}
       }'
@@ -165,4 +168,4 @@ export default {
 
 
 }
-</style>>
+</style>

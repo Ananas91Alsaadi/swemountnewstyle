@@ -1,5 +1,5 @@
 <script >
-var rootBrach = "/swemounttest";
+var rootBrach = "";
 
 export default {
   props:{

@@ -1,0 +1,210 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexStart {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.Tak-Container {
+  @extend .position-container;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+.tak-body {
+  flex: 0.6;
+
+  //   span {
+  //     display: none;
+  //   }
+}
+.Visual-select-taktackning {
+  border-right: 1px solid rgba(128, 128, 128, 0.228);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0.3rem;
+
+  p {
+    flex: 0.3;
+    cursor: pointer;
+    min-width: 7rem;
+  }
+  img {
+    cursor: pointer;
+    border-radius: 0.3rem;
+  }
+  display: flex;
+  div {
+    display: flex;
+    justify-content: start;
+    border-radius: 0.5rem;
+    flex: 1;
+    input {
+      width: 7rem;
+    }
+    .unit {
+    }
+    input {
+      padding: 0.6rem;
+    }
+
+    .p3 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: end;
+      flex: 1;
+      div {
+        display: flex;
+      }
+    }
+  }
+}
+.visual-select-taktackning-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.q {
+  border: none;
+  outline: none;
+  font: inherit;
+  margin: 1rem 0.5rem;
+  background: $input_bg;
+  color: #000;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem $input_bg;
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+}
+.tak-infast {
+  flex: 0.4;
+}
+.Tak-infast-Visual-select {
+  width: 100%;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    width: 30%;
+    min-width: 200px;
+  }
+  p {
+    min-width: 10rem;
+  }
+  img {
+    border-radius: 0.3rem;
+  }
+}
+.imgs-selects {
+  width: 170px;
+  height: 170px;
+}
+
+.klammer-installningar-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1rem;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.klammer-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+.installningar-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Visual-select-klammer {
+  display: flex;
+  padding: 1rem 0;
+  div {
+    display: flex;
+    flex: 0.5;
+    //reversing elements in html is causing app to crash. Choosing to reverse with css.
+    flex-direction: column-reverse;
+    p {
+      flex: 0.4;
+    }
+  }
+}
+.Visual-select-installningar {
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    display: flex;
+    flex: 0.5;
+    //reversing elements in html is causing app to crash. Choosing to reverse with css.
+    flex-direction: column-reverse;
+
+    p {
+      flex: 0.4;
+    }
+  }
+  .varmforzinkat {
+    min-height: 170px;
+    background-color: #bac4c8;
+    border: 3px dashed #000;
+  }
+  .svartlackerat {
+    min-height: 170px;
+    background-color: #000;
+    border: 3px dashed gray;
+  }
+}
+.Visual-select-taktyp {
+  @extend .Visual-select-installningar;
+  padding: 1rem;
+  img {
+    border-radius: 0.3rem;
+    flex: 0.1;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.9;
+  }
+}
+.middle-inputs {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+
+  justify-content: center;
+  align-items: flex-start;
+}

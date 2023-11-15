@@ -1,8 +1,18 @@
 <script >
 import calcBody from "../components/calcBody.vue";
+import history from "../components/history.vue";
+
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+import { animate } from "motion"
+
+//import { auth } from '../firebase';
+
 export default {
   props:{
     langIsSe:Boolean,
+    loggedInUser:Boolean,
+    userId:String,
   },
 
   components: {
@@ -11,7 +21,7 @@ export default {
 
   data(){
     return{
-    loggedIn:true,
+      loggedIn:true,
     showPassword:false,
     emailCheck:'',
     passwordCheck:'',
@@ -31,20 +41,50 @@ export default {
   },
   methods:{
     checkLoggare(){
-if (this.emailCheck=="info@swemount.se"&&this.passwordCheck=="swemountinfo") {
-  this.loggedIn=true;
-} else {alert("Wrong email or password")}
-    },
+      const auth = getAuth();
+
+      signInWithEmailAndPassword(auth, this.emailCheck, this.passwordCheck)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+    this.$emit("isSignedIn", user);
+
+    this.loggedIn=true;
+
+    // ...
+  })
+  .catch((error) => {
+    alert(error);
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+
+
+      /*
+      auth.signInWithEmailAndPassword(this.emailCheck, this.passwordCheck)
+        .then(() => {
+          this.loggedIn=true;
+          console.log('User logged in');
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    */
+      },
+
+      check(){
+      },
   },
 }
 
 </script>
 
 <template>
-  <main>
+   <!-- <main>
     <img class="head-imgs " src="/img/swemount15.jpg" alt="">
 
-    <h1 >{{ langIsSe? "Kalkylator": "Calculator" }}</h1>
+    <h1 @click="check">{{ langIsSe? "Kalkylator": "Calculator" }}</h1>
 
     <div class="less768">
       <div class="signup-msg">{{ langIsSe? se[1]: en[1] }}</div>
@@ -54,31 +94,97 @@ if (this.emailCheck=="info@swemount.se"&&this.passwordCheck=="swemountinfo") {
 
     <div class="over768">
 
-<div v-if="!loggedIn" >
-  <div class="second-head margin-bottoms"> 
+      <div v-if="!loggedIn">
+        <div class="second-head margin-bottoms">
+          <h1>{{langIsSe? "Logga in": "Log in"}}</h1>
+          <hr>
+        </div>
+
+        <form @submit.prevent="login" action="">
+          <label for="email">
+            <p>Email:</p><input type="email" name="email" placeholder="anders.andersson@gmail.com" v-model="emailCheck"
+              required>
+          </label>
+          <label for="password" style="position:relative;">
+            <p>{{ langIsSe? "Lösenord": "Password" }}:</p><input :type="[showPassword?'text':'password']"
+              name="password" placeholder="***********" v-model="passwordCheck" required>
+            <div class="show-buttons" @click="showPassword=!showPassword"><i class="fa-regular fa-eye"
+                v-if="showPassword"></i><i class="fa-regular fa-eye-slash" v-if="!showPassword"></i></div>
+          </label>
+
+          <button @click="checkLoggare">{{ langIsSe? "Logga in": "Log in" }}</button>
+
+        </form>
+        <div class="signup-msg">{{ langIsSe? se[0]: en[0] }}</div>
+      </div>
+
+      <div v-if="loggedIn">
+
+        <calcBody :userId="userId" />
+
+      </div>
+    </div>
+  </main> -->
+
+
+
+
+  <!--NEW Log in View, created 2023-10-04-->
+
+
+  <main>
+    <div v-if="!loggedIn" class="login-container">
+      <div class="form-container">
         <h1>{{langIsSe? "Logga in": "Log in"}}</h1>
-   <hr>
-  </div>
+        <form @submit.prevent="login" action="">
+          <label for="email">
+            <input type="email" name="email" placeholder="email@example.com" v-model="emailCheck" required>
+          </label>
+          <label for="password" style="position:relative;">
+            <input :type="[showPassword?'text':'password']" name="password" placeholder="Lösenord"
+              v-model="passwordCheck" required>
+            <div class="show-buttons" @click="showPassword=!showPassword"><i class="fa-regular fa-eye"
+                v-if="showPassword"></i><i class="fa-regular fa-eye-slash" v-if="!showPassword"></i></div>
+          </label>
+          <button type="button"
+            class="secondary-button">{{langIsSe? "Skicka min veriferingskod": "Send my verification code"}} <img
+              src="../../public/icons/svgs/device-mobile-camera.svg" alt="device-mobile-camera">
+          </button>
+          <p>{{langIsSe? "Fyll i verifieringskoden du fått på mejl": "Fill in verification code you got in email"}}</p>
+          <label for="name">
+            <input type="text" name="name" placeholder="Veriferingskod" required>
+          </label>
+          <button @click="checkLoggare" type="submit" class="main-button">Logga in</button>
 
-  <form action="">
-    <label for="email"><p>Eamil:</p><input type="email" name="email" placeholder="anders.andersson@gmail.com" v-model="emailCheck" required></label>
-      <label for="password" style="position:relative;"><p>{{ langIsSe? "Lösenord": "Password" }}:</p><input :type="[showPassword?'text':'password']" name="password" placeholder="***********" v-model="passwordCheck" required> <div class="show-buttons" @click="showPassword=!showPassword"><i class="fa-regular fa-eye" v-if="showPassword"></i><i class="fa-regular fa-eye-slash" v-if="!showPassword"></i></div></label>
+          <!-- <div class="signup-msg">{{ langIsSe? se[0]: en[0] }}</div> -->
+          <p>Tack för ditt intresse för vårt företag. För att registrera dig och skapa ett konto, vänligen kontakta oss.
+            När du har slutfört registreringsprocessen och mottagit dina inloggningsuppgifter kan du logga in och få
+            tillgång till våra tjänster. Vi ser fram emot att få arbeta med dig.</p>
+        </form>
+      </div>
+    </div>
+    <div v-if="!loggedIn" class=" login-logo-container">
+      <div class="logo">
+        <span class="logo-span">SOL</span>IFOKUS
+      </div>
+    </div>
 
-      <button @click="checkLoggare">{{ langIsSe? "Logga in": "Log in" }}</button>
-
-  </form>
-  <div class="signup-msg">{{ langIsSe? se[0]: en[0] }}</div>
-</div>
-
-<div v-if="loggedIn">
-
-<calcBody />
-
-</div>
-</div>
-    </main>
+    <!--
+      
+      
+      Later on i think we need to make this a route/link to calcBody component instead of inserting the calcBody component in the login <main>
+      
+        
+      -->
+    <div v-else-if="loggedIn">
+      <calcBody :userId="userId" />
+    </div>
+  </main>
 </template>
 <style scoped>
+h1{
+  margin-top: 10vw;
+} 
 @media screen and (min-width: 414px) {
 .margin-bottoms{
   margin-bottom: 4vw;
@@ -93,8 +199,9 @@ if (this.emailCheck=="info@swemount.se"&&this.passwordCheck=="swemountinfo") {
   .margin-bottoms{
   margin-bottom: 48px;
 }
-
-
+h1{
+  margin-top: 150px;
+} 
 }
 
 </style>

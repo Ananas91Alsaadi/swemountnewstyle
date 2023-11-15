@@ -1,266 +1,304 @@
 [
- {
-  "ArtNr": "BF1400",
-  "Benämning": "Fäste falsad panna solsys gängad zm",
-  "GS1": "-",
-  "Vikt": 0.7,
-  "Pris": 78,
-  "Antal": 0
- },
- {
-  "ArtNr": "BU1200",
-  "Benämning": "Bultsats 100st M10x20mm vfz",
-  "GS1": 7340044700140,
-  "Vikt": 2,
-  "Pris": 458,
-  "Antal": 0
- },
- {
-  "ArtNr": "BU1201",
-  "Benämning": "Bultsats 10st M10x20mm vfz",
-  "GS1": 7340044700157,
-  "Vikt": 0.2,
-  "Pris": 66,
-  "Antal": 0
- },
- {
-  "ArtNr": "CP1400",
-  "Benämning": "C-profil solinfästning 180x50x50 zm",
-  "GS1": "-",
-  "Vikt": 0.4,
-  "Pris": 78,
-  "Antal": 0
- },
- {
-  "ArtNr": "FF1400",
-  "Benämning": "Falsfäste solsystem monterad zm",
-  "GS1": "-",
-  "Vikt": 0.46,
-  "Pris": 108,
-  "Antal": 0
- },
- {
-  "ArtNr": "FP1400",
-  "Benämning": "Fotplatta solsystem 180x60x75 zm",
-  "GS1": "-",
-  "Vikt": 0.4,
-  "Pris": 48,
-  "Antal": 0
- },
- {
-  "ArtNr": "GB0010",
-  "Benämning": "Gummibricka M10",
-  "GS1": 7340044700348,
-  "Vikt": 0.0025,
-  "Pris": 6,
-  "Antal": 0
- },
- {
-  "ArtNr": "IS2450",
-  "Benämning": "Infästningsskena solsystem L=2,26m",
-  "GS1": "-",
-  "Vikt": 5.65,
-  "Pris": 428,
-  "Antal": 0
- },
- {
-  "ArtNr": "KL1000",
-  "Benämning": "Ändklämma komplett solsystem zm",
-  "GS1": "-",
-  "Vikt": 0.12,
-  "Pris": 88,
-  "Antal": 0
- },
- {
-  "ArtNr": "KL2000",
-  "Benämning": "Mittklämma komplett solsystem zm",
-  "GS1": "-",
-  "Vikt": 0.08,
-  "Pris": 51,
-  "Antal": 0
- },
- {
-  "ArtNr": "KL3050",
-  "Benämning": "Ändklämma solsystem zm",
-  "GS1": " -",
-  "Vikt": 0.06,
-  "Pris": 14,
-  "Antal": 0
- },
- {
-  "ArtNr": "LF1400",
-  "Benämning": "Läktfäste solenergi",
-  "GS1": "-",
-  "Vikt": 0.5,
-  "Pris": 170,
-  "Antal": 0
- },
- {
-  "ArtNr": "LL1505",
-  "Benämning": "Fäste låg 15gr låglutande system zm",
-  "GS1": " -",
-  "Vikt": 1.01,
-  "Pris": 246,
-  "Antal": 0
- },
- {
-  "ArtNr": "LL1530",
-  "Benämning": "Fäste hög 15gr låglutande system zm",
-  "GS1": " - ",
-  "Vikt": 1.6,
-  "Pris": 360,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA1008",
-  "Benämning": "Monteringsanvisning Tätplåt 2 sidor",
-  "GS1": "-",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA5101",
-  "Benämning": "Mont.anv. Solpaneler plåttak",
-  "GS1": "-",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA5102",
-  "Benämning": "Mont.anv. Solpaneler fotplatta",
-  "GS1": "-",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA5103",
-  "Benämning": "Mont.anv. Solpaneler papptak",
-  "GS1": "-",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA5104",
-  "Benämning": "Mont.anv. Solpaneler läktfäste",
-  "GS1": "-",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA5105",
-  "Benämning": "Monteringsanvisning MA5105",
-  "GS1": " -",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MA5111",
-  "Benämning": "Mont.anv. Solpaneler ändklämma",
-  "GS1": "-",
-  "Vikt": 0,
-  "Pris": 0,
-  "Antal": 0
- },
- {
-  "ArtNr": "MU1001",
-  "Benämning": "Muttersats 10st M10 vfz",
-  "GS1": 7340044700867,
-  "Vikt": 0.13,
-  "Pris": 30,
-  "Antal": 0
- },
- {
-  "ArtNr": "MU1010",
-  "Benämning": "Muttersats 100st M10 vfz",
-  "GS1": 7340044700874,
-  "Vikt": 1.3,
-  "Pris": 261,
-  "Antal": 0
- },
- {
-  "ArtNr": "PL5050",
-  "Benämning": "Plastlock utvändig 50x50 grå",
-  "GS1": "-",
-  "Vikt": 0.05,
-  "Pris": 15,
-  "Antal": 0
- },
- {
-  "ArtNr": "SKL3050",
-  "Benämning": "Ändklämma solsystem rf\/sv",
-  "GS1": "-",
-  "Vikt": 0.06,
-  "Pris": 31,
-  "Antal": 0
- },
- {
-  "ArtNr": "SS6190",
-  "Benämning": "Skruvsats 100st självg. 6,3x19mm rf",
-  "GS1": 7340044703042,
-  "Vikt": 0.61,
-  "Pris": 412,
-  "Antal": 0
- },
- {
-  "ArtNr": "SS6191",
-  "Benämning": "Skruvsats 10st självg. 6,3x19mm rf",
-  "GS1": 7340044703059,
-  "Vikt": 0.07,
-  "Pris": 68,
-  "Antal": 0
- },
- {
-  "ArtNr": "TF1400",
-  "Benämning": "Fäste ofalsad panna solsy gängad zm",
-  "GS1": "-",
-  "Vikt": 0.7,
-  "Pris": 78,
-  "Antal": 0
- },
- {
-  "ArtNr": "TP3552",
-  "Benämning": "Tätplåt slät 350x520mm zm",
-  "GS1": 7340044703677,
-  "Vikt": 2.5,
-  "Pris": 284,
-  "Antal": 0
- },
- {
-  "ArtNr": "TS6301",
-  "Benämning": "Skruvsats 10st 6x30mm 6-kant rf",
-  "GS1": 7340044705534,
-  "Vikt": 0.05,
-  "Pris": 68,
-  "Antal": 0
- },
- {
-  "ArtNr": "TS6310",
-  "Benämning": "Skruvsats 100st 6x30 6-kant rf",
-  "GS1": 7340044705541,
-  "Vikt": 0.45,
-  "Pris": 412,
-  "Antal": 0
- },
- {
-  "ArtNr": "VB1301",
-  "Benämning": "Bultsats 10st vagnsbult M10x30 vfz",
-  "GS1": 7340044703882,
-  "Vikt": 0.25,
-  "Pris": 66,
-  "Antal": 0
- },
- {
-  "ArtNr": "VB1305",
-  "Benämning": "Bultsats 50st vagnsbult M10x30 vfz",
-  "GS1": 7340044703905,
-  "Vikt": 1.25,
-  "Pris": 269,
-  "Antal": 0
- }
-]
+    {
+     "ArtNr": "BF1400",
+     "Benämning": "Fäste falsad panna solsys gängad zm",
+     "GS1": "-",
+     "Vikt": 0.7,
+     "Pris": 94,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "BU1200",
+     "Benämning": "Bultsats 100st M10x20mm vfz",
+     "GS1": 7340044700140,
+     "Vikt": 2,
+     "Pris": 550,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "BU1201",
+     "Benämning": "Bultsats 10st M10x20mm vfz",
+     "GS1": 7340044700157,
+     "Vikt": 0.2,
+     "Pris": 66,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "CP1400",
+     "Benämning": "C-profil solinfästning 180x50x50 zm",
+     "GS1": "-",
+     "Vikt": 0.4,
+     "Pris": 94,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "FF1400",
+     "Benämning": "Falsfäste solsystem monterad zm",
+     "GS1": "-",
+     "Vikt": 0.46,
+     "Pris": 130,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "FP1400",
+     "Benämning": "Fotplatta solsystem 180x60x75 zm",
+     "GS1": "-",
+     "Vikt": 0.4,
+     "Pris": 58,
+     "Antal": 0
+    },
+    {
+        "ArtNr": "TK1400",
+        "Benämning": "Takkroken",
+        "GS1": "-",
+        "Vikt": 0.622,
+        "Pris": 452,
+        "Antal": 0
+       },
+   
+    {
+     "ArtNr": "GB0010",
+     "Benämning": "Gummibricka M10",
+     "GS1": 7340044700348,
+     "Vikt": 0.0025,
+     "Pris": 7,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "IS2450",
+     "Benämning": "Infästningsskena solsystem L=2,26m",
+     "GS1": "-",
+     "Vikt": 5.65,
+     "Pris": 514,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "KL1000",
+     "Benämning": "Ändklämma komplett solsystem zm",
+     "GS1": "-",
+     "Vikt": 0.12,
+     "Pris": 106,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SKL1000",
+     "Benämning": "Ändklämma komplett solsystem svart",
+     "GS1": "-",
+     "Vikt": 0.12,
+     "Pris": 121,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "KL2000",
+     "Benämning": "Mittklämma komplett solsystem zm",
+     "GS1": "-",
+     "Vikt": 0.08,
+     "Pris": 61,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SKL2000",
+     "Benämning": "Mittklämma komplett solsystem svart",
+     "GS1": "-",
+     "Vikt": 0.08,
+     "Pris": 74,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "KL3050",
+     "Benämning": "Ändklämma solsystem zm",
+     "GS1": " -",
+     "Vikt": 0.06,
+     "Pris": 14,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "LF1400",
+     "Benämning": "Läktfäste solenergi",
+     "GS1": "-",
+     "Vikt": 0.5,
+     "Pris": 204,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "LL1505",
+     "Benämning": "Fäste låg 15gr låglutande system zm",
+     "GS1": " -",
+     "Vikt": 1.01,
+     "Pris": 246,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "LL1530",
+     "Benämning": "Fäste hög 15gr låglutande system zm",
+     "GS1": " - ",
+     "Vikt": 1.6,
+     "Pris": 360,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA1008",
+     "Benämning": "Monteringsanvisning Tätplåt 2 sidor",
+     "GS1": "-",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA5101",
+     "Benämning": "Mont.anv. Solpaneler plåttak",
+     "GS1": "-",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA5102",
+     "Benämning": "Mont.anv. Solpaneler fotplatta",
+     "GS1": "-",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA5103",
+     "Benämning": "Mont.anv. Solpaneler papptak",
+     "GS1": "-",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA5104",
+     "Benämning": "Mont.anv. Solpaneler läktfäste",
+     "GS1": "-",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA5105",
+     "Benämning": "Monteringsanvisning MA5105",
+     "GS1": " -",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MA5111",
+     "Benämning": "Mont.anv. Solpaneler ändklämma",
+     "GS1": "-",
+     "Vikt": 0,
+     "Pris": 0,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MU1001",
+     "Benämning": "Muttersats 10st M10 vfz",
+     "GS1": 7340044700867,
+     "Vikt": 0.13,
+     "Pris": 30,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "MU1010",
+     "Benämning": "Muttersats 100st M10 vfz",
+     "GS1": 7340044700874,
+     "Vikt": 1.3,
+     "Pris": 261,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "PL5050",
+     "Benämning": "Plastlock utvändig 50x50 grå",
+     "GS1": "-",
+     "Vikt": 0.05,
+     "Pris": 15,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SPL5050",
+     "Benämning": "Plastlock utvändig 50x50 svart",
+     "GS1": "-",
+     "Vikt": 0.05,
+     "Pris": 18,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SKL3050",
+     "Benämning": "Ändklämma solsystem rf\/sv",
+     "GS1": "-",
+     "Vikt": 0.06,
+     "Pris": 31,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SS6190",
+     "Benämning": "Skruvsats 100st självg. 6,3x19mm rf",
+     "GS1": 7340044703042,
+     "Vikt": 0.61,
+     "Pris": 494,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SS6191",
+     "Benämning": "Skruvsats 10st självg. 6,3x19mm rf",
+     "GS1": 7340044703059,
+     "Vikt": 0.07,
+     "Pris": 68,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "SS1025",
+     "Benämning": "Stockskruv komplett solsystem ",
+     "Pris": 160
+    },
+    {
+     "ArtNr": "TF1400",
+     "Benämning": "Fäste ofalsad panna solsy gängad zm",
+     "GS1": "-",
+     "Vikt": 0.7,
+     "Pris": 94,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "TP3552",
+     "Benämning": "Tätplåt slät 350x520mm zm",
+     "GS1": 7340044703677,
+     "Vikt": 2.5,
+     "Pris": 341,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "TS6301",
+     "Benämning": "Skruvsats 10st 6x30mm 6-kant rf",
+     "GS1": 7340044705534,
+     "Vikt": 0.05,
+     "Pris": 68,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "TS6310",
+     "Benämning": "Skruvsats 100st 6x30 6-kant rf",
+     "GS1": 7340044705541,
+     "Vikt": 0.45,
+     "Pris": 494,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "VB1301",
+     "Benämning": "Bultsats 10st vagnsbult M10x30 vfz",
+     "GS1": 7340044703882,
+     "Vikt": 0.25,
+     "Pris": 66,
+     "Antal": 0
+    },
+    {
+     "ArtNr": "VB1305",
+     "Benämning": "Bultsats 50st vagnsbult M10x30 vfz",
+     "GS1": 7340044703905,
+     "Vikt": 1.25,
+     "Pris": 269,
+     "Antal": 0
+    }
+   ]

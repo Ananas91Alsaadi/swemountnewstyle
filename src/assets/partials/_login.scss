@@ -1,0 +1,124 @@
+.login-container {
+  border: none;
+  text-align: left;
+  width: 768px;
+  margin: auto;
+  font-size: 17px;
+  display: flex;
+  height: 90vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: $EuroFont;
+  h1 {
+    font-size: 34px;
+    font-weight: 400;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 20px;
+    background: #efefef;
+
+    border-radius: 10px;
+    margin-bottom: 5px;
+    &:focus {
+      background: #aaeaea;
+    }
+  }
+  p {
+    margin: 20px 0 10px 5px;
+    font-family: $Poppins;
+    font-size: 13px;
+  }
+}
+.show-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 14px 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    font-size: 18px;
+  }
+}
+.secondary-button {
+  color: $gold_orange_text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  gap: 3px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  img {
+    width: 15px;
+    color: white;
+  }
+}
+.login-logo-container {
+  margin-top: 20px;
+  display: flex;
+  font-size: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.logo {
+  text-align: center;
+
+  color: #009eb6;
+  pointer-events: none;
+  user-select: none;
+  font-family: "Eurosoft W03 Medium";
+}
+.logo-span {
+  color: $gold_orange_text;
+  font-weight: bold;
+}
+@media (max-width: $breakpoint-small-screen) {
+  .login-container {
+    border: none;
+    text-align: left;
+    width: 90%;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+  }
+  .login-logo-container {
+    text-align: center;
+    font-size: 24px;
+    color: #009eb6;
+    display: flex;
+    padding: 0;
+    font-size: 34px;
+    justify-content: start;
+  }
+}

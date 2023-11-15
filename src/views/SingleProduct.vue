@@ -20,7 +20,7 @@ export default {
   ],
 
 
-      rootBrach:"/swemounttest",
+      rootBrach:"",
 
       isingleProduct:picsrc.productsinfo.find(i=> i.artNum==this.$route.params.id),
       identifiering: picsrc[(this.$route.params.id+'a')] ? picsrc[(this.$route.params.id+'a')] :'',
@@ -124,6 +124,8 @@ console.log(this.Prestanda);
 
       </div>
     </div>
+
+    
     </main>
   </template>
   <style>

@@ -9,21 +9,32 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
+    "@firebase/auth": "^0.21.3",
+    "@firebase/firestore": "^3.8.4",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
-    "axios": "^1.2.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "firebase": "^9.17.2",
+    "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.28",
     "konva": "^8.4.2",
+    "motion": "^10.16.4",
     "proj4": "^2.8.1",
     "vue": "^3.2.45",
     "vue-konva": "^3.0.2",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vue-slider-component": "^4.1.0-beta.7",
+    "vue3-carousel": "^0.3.1",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1",
     "vite": "^4.0.0"
   }
 }

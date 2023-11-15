@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 30px 1px rgba(165, 165, 165, 0.362);
+  //for large screens
+  max-width: 1200px;
+  //centering horizontally.
+  margin: auto;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.intro-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.intro-img {
+  width: 100%;
+  height: 100vh;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+  }
+}
+.intro-body {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  div {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  height: 100vh;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.315);
+
+  padding: 0 2rem;
+}
