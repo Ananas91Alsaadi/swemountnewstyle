@@ -9,7 +9,7 @@ dotenv.config()
 
 // https://vitejs.dev/config/
 const viteConfig = defineConfig({
-  //base:'/swemounttest/',
+  base:'/swemountnewstyle/',
   plugins: [vue()],
   resolve: {
     alias: {
