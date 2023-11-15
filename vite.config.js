@@ -8,7 +8,7 @@ dotenv.config()
 
 
 // https://vitejs.dev/config/
-const viteConfig = defineConfig({
+export default defineConfig({
   base:'/swemountnewstyle/',
   plugins: [vue()],
   resolve: {
@@ -38,10 +38,5 @@ const viteConfig = defineConfig({
 });
 
 /*/////////////////////////////////////////////*/
-const publicPathConfig = {
-  publicPath: process.env.NODE_ENV === "production" ? "/swemountnewstyle/" : "/",
-};
-
-export default Object.assign({}, viteConfig, publicPathConfig);
 
 
