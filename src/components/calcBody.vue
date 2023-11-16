@@ -161,7 +161,7 @@ export default {
 
     },
 
-    async getSnoAndVind() {
+     getSnoAndVind() {
       /*let klimatlastX =
         Math.floor((118181.8182 + (200000 / 66) * this.offsetX) * 1000) / 1000;
       let klimatlastY =
@@ -173,35 +173,10 @@ export default {
       this.sno = 0;
       this.vind = 0;
 
-      console.log(klimatlastX);
-      console.log(klimatlastY);
-      
-      fetch('https://api.boverket.se/klimatlast/v1/snolast?x-koord=6785588.830230405&y-koord=494854.68650014367', {
-        method: 'GET',
-        // Request headers
-        headers: {
-            'Cache-Control': 'no-cache',}
-    })
-    .then(response => {
-        console.log(response.status);
-        console.log(response.text());
-    })
-    .catch(err => console.error(err));
-  
-
-
-
-
-/*
       axios
         .get(
-          `https://api.boverket.se/klimatlast/v1/snolast?x-koord=${klimatlastY}&y-koord=${klimatlastX}`,
+          `https://api.boverket.se/klimatlast/v1/snolast?x-koord=${klimatlastY}&y-koord=${klimatlastX}`
 
-          {
-            headers: {
-              'Cache-Control': 'no-cache',
-            },
-          }
         )
         .then((response1) => {
           this.sno = response1.data.värde.replace(",", ".");
@@ -216,7 +191,7 @@ export default {
         .then((response2) => {
           this.vind = response2.data.värde.replace(",", ".");
         });
-        */
+        
     },
 
 
