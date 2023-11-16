@@ -829,7 +829,7 @@ export default {
           }" map-type-id="terrain" class="google-map">
               <GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true"
                 :draggable="true" @dragend="getLatLng" :icon="{
-              url: '/logomarker.png', //                  url: '/swemounttest/logomarker.png',
+              url: '/swemountnewstyle/logomarker.png', //                  url: '/swemounttest/logomarker.png',
 
               scaledSize: { width: 40, height: 40 },
               labelOrigin: { x: 16, y: -10 },
