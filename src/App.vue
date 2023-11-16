@@ -11,7 +11,7 @@ export default {
     return {
       langIsSe:true,
       menuMobile:false,
-      loggedInUser:false,
+      loggedInUser:true,
       userId: "",
     }
   },
