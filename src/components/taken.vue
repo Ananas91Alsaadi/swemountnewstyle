@@ -1058,6 +1058,9 @@ lpc(){
       (this.slataTakExtraFromCanvas = false), this.randzoneCalc();
 
       this.$refs.canvasComp.resetCanvas();
+
+      window.location.reload();
+
     },
 
     switchBreddHojd(v) {
@@ -1246,7 +1249,7 @@ let checkErr=true;
          this.lpc();
                        this.inProgress = false;
                      
-
+console.log(this.showResult);
   
 },
 
@@ -2121,6 +2124,8 @@ let checkErr=true;
       if (this.extraFasteCount[panel]) {
         Allfaste += 2 * this.panelarRows[panel];
       }
+      
+              
 
       return Allfaste;
     },
@@ -3803,7 +3808,7 @@ let checkErr=true;
 
           <div>
             <!-- Button to open/close the sidebar -->
-            <button v-if="!showResult" class="toggle-button" @click="toggleSidebar">Toggle Sidebar</button>
+            <button v-if="!showResult" class="toggle-button" @click="toggleSidebar">Egenskaper för tak</button>
 
             <!-- Sidebar content -->
             <div class="sidebar" :class="{ 'open': isSidebarOpen }">
@@ -4021,11 +4026,13 @@ let checkErr=true;
     </Presence>
     <div class="animation-buttons ">
       <!-- If current2 === 0, display a button that goes back to calcbody -->
-      <button v-if="current2 === 0" @click="calcbody"> <img src="../../public/icons/svgs/arrow-fat-left.svg" alt="">
+      <button v-if="current2 < 0" @click="calcbody"> <img src="../../public/icons/svgs/arrow-fat-left.svg" alt="">
+        
       </button>
 
       <!-- If current2 > 0, display a button that decrements current2 -->
-      <button v-else-if="current2<3" @click="current2--"> <img src="../../public/icons/svgs/arrow-fat-left.svg" alt="">
+      <button v-else-if="current2<3&&current2>0" @click="current2--"> <img src="../../public/icons/svgs/arrow-fat-left.svg" alt="">
+
       </button>
 
 

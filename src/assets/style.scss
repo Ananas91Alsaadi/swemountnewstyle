@@ -179,7 +179,6 @@ span.unit {
   p {
     display: flex;
     width: 100%;
-    flex: 1;
     justify-content: space-between;
     align-items: flex-start;
   }
@@ -310,4 +309,17 @@ tr {
 
 .long_input{
   width: 20rem;
+}
+
+.check-input{
+  height: 2vw;
+  cursor: pointer;
+}
+
+.download-button {
+  background: $mainBtn_bg;
+  border-radius: 1rem;
+  width: 50%;
+  padding: 1.2vw;
+  margin: 1vw 22vw;
 }

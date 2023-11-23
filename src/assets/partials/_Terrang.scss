@@ -50,6 +50,7 @@
     }
     &:hover {
       .description {
+        
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -59,6 +60,20 @@
       }
     }
   }
+}
+
+.description {
+  text-align: left;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.6rem;
+
+  box-shadow: inset 1px 1px 15px #fff;
+
+  align-items: center;
+  height: auto;
+  color: white;
+  background: rgba(28, 28, 28, 0.808);
 }
 
 .terrang-body {

@@ -110,6 +110,7 @@ export default {
       showKon: [false],
       whenPdf:'block',
       addressValue:{address:'',langlat:{ lat: 0, lng: 0 }},
+      terrDescription:0,
     };
   },
   computed: {
@@ -460,7 +461,7 @@ export default {
           <div class="intro-body">
             <div class="multi_elements">
               <RouterLink to="/history" class="a-button history">
-                {{ langIsSe? "Min Projekthistoria": "Min Projekthistoria" }}
+                {{ langIsSe? "Min Projekt historia": "Min Projekt historia" }}
                 <!--to change color of svg icon, change the fill in the svg file-->
                 <img src="../../public/icons/svgs/open_in_new_FILL0_wght400_GRAD0_opsz24.svg" alt="">
               </RouterLink>
@@ -495,7 +496,7 @@ export default {
               </div>
               <div>
                 <div class="second-head">
-    <h1>{{ langIsSe ? "Projekt Namn" : "Project Name" }}</h1>
+    <h1>{{ langIsSe ? "Projekt Namn" : "Projekt Namn" }}</h1>
     <input class="long_input" placeholder="Project Name" type="text" v-model="projektNamn" />
 
   </div>
@@ -846,7 +847,7 @@ export default {
               Ange adress för att starta konfiguratorn
             </p>
             <label for="">
-              <GMapAutocomplete class="long_input" placeholder="Select address" :component-restrictions="{
+              <GMapAutocomplete class="long_input" placeholder="Ange adress" :component-restrictions="{
                 country: 'se',
               }" @place_changed="setPlace">
               </GMapAutocomplete>
@@ -887,7 +888,7 @@ export default {
           <div class="terrang-img">
             <!--autoplay="speed in ms", wrap around for looping-->
 
-            <Carousel :autoplay="2000" :wrap-around="true">
+            <Carousel  :wrap-around="true" v-model="Terrängtyp">
               <Slide v-for="slide in 1" :key="slide">
                 <div class="carousel__item">
                   <img src="/calc/terrang1.jpg" alt="">
@@ -935,7 +936,7 @@ export default {
           </p> -->
 
             <div class="Terrangtyp-wrapper">
-              <div class="terrangtyp">
+              <div class="terrangtyp" @mouseover="terrDescription=1" @mouseleave="terrDescription=0">
                 <div @click="Terrängtyp = 0" :class="['selection', Terrängtyp == 0 ? '  selection-pre' : '']">
                   <img src="/calc/1.jpg" alt="" :class="[
               'imgs-selects',
@@ -947,12 +948,10 @@ export default {
                         class="fa-solid fa-square-check white"></i>
                     </span>
                   </p>
-                  <div class="description">
-                    Havs- eller kustområde exponerat för öppet hav.
-                  </div>
+                  
                 </div>
               </div>
-              <div class="terrangtyp">
+              <div class="terrangtyp" @mouseover="terrDescription=2" @mouseleave="terrDescription=0">
                 <div @click="Terrängtyp = 1" :class="['selection', Terrängtyp == 1 ? '  selection-pre' : '']">
                   <img src="/calc/2.jpg" alt="" :class="[
               'imgs-selects ',
@@ -964,13 +963,10 @@ export default {
                         class="fa-solid fa-square-check white"></i>
                     </span>
                   </p>
-                  <div class="description">
-                    Sjö eller plant och horisontellt område med försumbar vegetation
-                    och utan hinder.
-                  </div>
+                 
                 </div>
               </div>
-              <div class="terrangtyp">
+              <div class="terrangtyp" @mouseover="terrDescription=3" @mouseleave="terrDescription=0">
                 <div @click="Terrängtyp = 2" :class="['selection', Terrängtyp == 2 ? '  selection-pre' : '']">
                   <img src="/calc/3.jpg" alt="" :class="[
               'imgs-selects ',
@@ -982,14 +978,10 @@ export default {
                         class="fa-solid fa-square-check white"></i>
                     </span>
                   </p>
-                  <div class="description">
-                    Område med låg vegetation som gräs och enstaka hinder (träd,
-                    byggnader) med minsta inbördes avstånd lika med 20 gånger hindrets
-                    höjd.
-                  </div>
+                  
                 </div>
               </div>
-              <div class="terrangtyp">
+              <div class="terrangtyp" @mouseover="terrDescription=4" @mouseleave="terrDescription=0">
                 <div @click="Terrängtyp = 3" :class="['selection', Terrängtyp == 3 ? '  selection-pre' : '']">
                   <img src="/calc/4.jpg" alt="" :class="[
               'imgs-selects ',
@@ -1001,14 +993,10 @@ export default {
                         class="fa-solid fa-square-check white"></i>
                     </span>
                   </p>
-                  <div class="description">
-                    Område täckt med vegetation eller byggnader eller med enstaka
-                    hinder med största inbördes avstånd lika med 20 gånger hindrets
-                    höjd (till exempel byar, förorter, skogsmark).
-                  </div>
+                  
                 </div>
               </div>
-              <div class="terrangtyp">
+              <div class="terrangtyp" @mouseover="terrDescription=5" @mouseleave="terrDescription=0">
                 <div @click="Terrängtyp = 4" :class="['selection', Terrängtyp == 4 ? '  selection-pre' : '']">
                   <img src="/calc/5.jpg" alt="" :class="[
               'imgs-selects ',
@@ -1020,12 +1008,31 @@ export default {
                         class="fa-solid fa-square-check white"></i>
                     </span>
                   </p>
-                  <div class="description">
+                 
+                </div>
+              </div>
+              <div class="description" v-if="terrDescription==1">
+                    Havs- eller kustområde exponerat för öppet hav.
+                  </div>
+                  <div class="description" v-if="terrDescription==2">
+                    Sjö eller plant och horisontellt område med försumbar vegetation
+                    och utan hinder.
+                  </div>
+                  <div class="description" v-if="terrDescription==3">
+                    Område med låg vegetation som gräs och enstaka hinder (träd,
+                    byggnader) med minsta inbördes avstånd lika med 20 gånger hindrets
+                    höjd.
+                  </div>
+                  <div class="description" v-if="terrDescription==4">
+                    Område täckt med vegetation eller byggnader eller med enstaka
+                    hinder med största inbördes avstånd lika med 20 gånger hindrets
+                    höjd (till exempel byar, förorter, skogsmark).
+                  </div>
+                  <div class="description" v-if="terrDescription==5">
                     Område där minst 15 % av arean är bebyggd och där byggnadernas
                     medelhöjd är > 15 m.
                   </div>
-                </div>
-              </div>
+
             </div>
           </div>
 

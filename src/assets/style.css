@@ -319,6 +319,18 @@ main {
   background: rgba(28, 28, 28, 0.808);
 }
 
+.description {
+  text-align: left;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: inset 1px 1px 15px #fff;
+  align-items: center;
+  height: auto;
+  color: white;
+  background: rgba(28, 28, 28, 0.808);
+}
+
 .terrang-body {
   flex: 0.5;
   z-index: 5;
@@ -397,8 +409,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: end;
-  flex: 1;
 }
 .Visual-select-taktackning div .p3 div {
   display: flex;
@@ -617,7 +627,7 @@ main {
   background: linear-gradient(-90deg, rgb(24, 159, 172) 0%, rgb(107, 159, 137) 100%);
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem;
-  width: 150px;
+  width: 200px;
   position: absolute;
   top: 20px;
   right: 0px;
@@ -641,14 +651,6 @@ main {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
   width: 150px;
-}
-
-.download-button {
-  background: linear-gradient(-90deg, rgb(24, 159, 172) 0%, rgb(107, 159, 137) 100%);
-  border-radius: 1rem;
-  width: 50vw;
-  padding: 1.2vw;
-  margin: 1vw 22vw;
 }
 
 * {
@@ -804,7 +806,6 @@ span.unit {
 .selection p {
   display: flex;
   width: 100%;
-  flex: 1;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -932,4 +933,17 @@ tr:nth-child(odd) {
 }
 .long_input {
   width: 20rem;
+}
+
+.check-input {
+  height: 2vw;
+  cursor: pointer;
+}
+
+.download-button {
+  background: linear-gradient(-90deg, rgb(24, 159, 172) 0%, rgb(107, 159, 137) 100%);
+  border-radius: 1rem;
+  width: 50%;
+  padding: 1.2vw;
+  margin: 1vw 22vw;
 }/*# sourceMappingURL=style.css.map */
