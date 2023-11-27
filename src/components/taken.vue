@@ -9,7 +9,6 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 import axios from "axios";
 
-
 import { getFirestore, collection, getDocs,addDoc } from "firebase/firestore";
 import { Motion, Presence } from "motion/vue";
 
@@ -78,7 +77,7 @@ export default {
           FyP: 2,
           FyN: 2,
         },
-        nyBF: {
+        KLBF: {
           FxP: 2.5,
           FxN: 2.5,
           FyP: 2,
@@ -103,7 +102,7 @@ export default {
           FyP: 2,
           FyN: 2,
         },
-        nyTF: {
+        KLTF: {
           FxP: 2.5,
           FxN: 2.5,
           FyP: 2,
@@ -286,7 +285,7 @@ export default {
         "MA5111",
         "MA5102",
       ],
-      BetongpannorNy: [
+      BetongpannorKlämfäste: [
         "TK1400",
         "BU1200",
         "BU1201",
@@ -309,7 +308,7 @@ export default {
         "MA5111",
         "MA5102",
       ],
-      TegelpannorNy: [
+      TegelpannorKlämfäste: [
         "TK1400",
         "BU1200",
         "BU1201",
@@ -444,7 +443,7 @@ export default {
             pic: `${rootBrach}/products/TK1400l.jpg`,
           },
           {
-            name: "ny",
+            name: "Klämfäste",
             pic: `${rootBrach}/products/KL1400.jpg`,
           },
         ],
@@ -467,7 +466,7 @@ export default {
             pic: `${rootBrach}/products/TK1400l.jpg`,
           },
           {
-            name: "ny",
+            name: "Klämfäste",
             pic: `${rootBrach}/products/KL1400.jpg`,
           },
         ],
@@ -570,7 +569,7 @@ export default {
         return this.BetongpannorTakkroken;
       }
       if (this.taktTyp == 0 && this.Infästning == 4) {
-        return this.BetongpannorNy;
+        return this.BetongpannorKlämfäste;
       }
       if (this.taktTyp == 1 && this.Infästning == 0) {
         return this.TegelpannorFotplatta;
@@ -585,7 +584,7 @@ export default {
         return this.TegelpannorTakkroken;
       }
       if (this.taktTyp == 1 && this.Infästning == 4) {
-        return this.TegelpannorNy;
+        return this.TegelpannorKlämfäste;
       }
       if (this.taktTyp == 2) {
         return this.FalsatPlåttakKlicktakFalsfäste;
@@ -621,11 +620,11 @@ export default {
      let Infästning=  
             this.selectedTak == this.BetongpannorFotplatta ? "Fotplatta" : 
             this.selectedTak == this.BetongpannorLäktfäste ? "Läktfäste" : 
-            this.selectedTak == this.BetongpannorNy ? "ny" : 
+            this.selectedTak == this.BetongpannorKlämfäste ? "Klämfäste" : 
             this.selectedTak == this.BetongpannorTakkroken ? this.Infästning == 3? "Takkroken lite":"Takkroken" : 
             this.selectedTak == this.TegelpannorFotplatta ? "Fotplatta" : 
             this.selectedTak == this.TegelpannorLäktfäste ? "Läktfäste" : 
-            this.selectedTak == this.TegelpannorNy ? "ny" : 
+            this.selectedTak == this.TegelpannorKlämfäste ? "Klämfäste" : 
             this.selectedTak == this.TegelpannorTakkroken ? this.Infästning == 3? "Takkroken lite":"Takkroken" : 
             this.selectedTak == this.FalsatPlåttakKlicktakFalsfäste ? "Falsfäste" : 
             this.selectedTak == this.ProfileratPlåttakLångSkena ? "LångSkena" : 
@@ -1323,7 +1322,7 @@ console.log(this.showResult);
         .setTextColor("#22326C")
         .text("Total", 250, 110);
       doc
-        .setDrawColor("#fcb324")
+        .setDrawColor("#409e99")
         .setLineWidth(4)
         .setLineCap("round")
         .line(250, 120, 290, 120);
@@ -1377,11 +1376,13 @@ console.log(this.showResult);
           195
         );
 
-      doc.autoTable({
+        doc.setFontSize(3);
+        doc.autoTable({
         html: "#table-topdf",
         useCss: true,
         startY: 230,
         startX: 10,
+
       });
 
       doc.addPage();
@@ -1427,25 +1428,26 @@ console.log(this.showResult);
         .setFont("Montserrat-Bold")
         .setFontSize(9)
         .setTextColor("#22326C")
-        .text("randzoner", 50, 490);
+        .text("randzoner", 50, 540);
 
       doc.autoTable({
         html: "#randzon",
         useCss: true,
-        startY: 525,
+        startY: 575,
         margin: 50,
         tableWidth: 200,
+        styles: { fontSize: 10 },
       });
       switch (this.TypAvTak) {
         case 1:
-          doc.addImage(`${rootBrach}/img/sadel.jpeg`, "jpeg", 300, 480, 200, 200);
+          doc.addImage(`${rootBrach}/img/sadel.jpeg`, "jpeg", 300, 530, 200, 200);
           break;
         case 2:
           doc.addImage(
             `${rootBrach}/img/randzoneMot.jpeg`,
             "jpeg",
             300,
-            480,
+            530,
             200,
             200
           );
@@ -1455,7 +1457,7 @@ console.log(this.showResult);
             `${rootBrach}/img/randzone.jpeg`,
             "jpeg",
             300,
-            480,
+            530,
             200,
             200
           );
@@ -1522,7 +1524,7 @@ console.log(this.showResult);
           .setTextColor("#22326C")
           .text("Sektion " + (i + 1), 250, 150);
         doc
-          .setDrawColor("#fcb324")
+          .setDrawColor("#409e99")
           .setLineWidth(4)
           .setLineCap("round")
           .line(250, 160, 325, 160);
@@ -1544,7 +1546,7 @@ console.log(this.showResult);
           .setTextColor("#22326C")
           .text("Sektion Bild" + (i + 1), 225, 130);
         doc
-          .setDrawColor("#fcb324")
+          .setDrawColor("#409e99")
           .setLineWidth(4)
           .setLineCap("round")
           .line(250, 140, 325, 140);
@@ -1745,7 +1747,7 @@ console.log(this.showResult);
           .setTextColor("#22326C")
           .text("Result " + (i + 1), 100, 150);
         doc
-          .setDrawColor("#fcb324")
+          .setDrawColor("#409e99")
           .setLineWidth(4)
           .setLineCap("round")
           .line(100, 160, 150, 160);
@@ -1798,7 +1800,7 @@ console.log(this.showResult);
           .setTextColor("#22326C")
           .text("Utnyttjandegrader " + (i + 1), 100, 150);
         doc
-          .setDrawColor("#fcb324")
+          .setDrawColor("#409e99")
           .setLineWidth(4)
           .setLineCap("round")
           .line(100, 160, 150, 160);
@@ -1925,7 +1927,7 @@ console.log(this.showResult);
         result = this.dimensionCapacity.TKBF;
       }
       if (this.taktTyp == 0 && this.Infästning == 4) {
-        result = this.dimensionCapacity.nyBF;
+        result = this.dimensionCapacity.KLBF;
       }
       if (this.taktTyp == 1 && this.Infästning == 0) {
         result = this.dimensionCapacity.FPTF;
@@ -1940,7 +1942,7 @@ console.log(this.showResult);
         result = this.dimensionCapacity.TKTF;
       }
       if (this.taktTyp == 1 && this.Infästning == 4) {
-        result = this.dimensionCapacity.nyTF;
+        result = this.dimensionCapacity.KLTF;
       }
       if (this.taktTyp == 2) {
         result = this.dimensionCapacity.FF;
@@ -2461,7 +2463,7 @@ console.log(this.showResult);
           );
         }
       }
-      if (this.selectedTak == this.BetongpannorNy) {
+      if (this.selectedTak == this.BetongpannorKlämfäste) {
         for (let i in this.panelarAll) {
           let Allfaste = this.findAllfaste(i);
           let oneRow = this.rowLongs[i] / 100 / 2.26;
@@ -2887,7 +2889,7 @@ console.log(this.showResult);
           );
         }
       }
-      if (this.selectedTak == this.TegelpannorNy) {
+      if (this.selectedTak == this.TegelpannorKlämfäste) {
         for (let i in this.panelarAll) {
           let Allfaste = this.findAllfaste(i);
 
@@ -4935,7 +4937,7 @@ input[type="checkbox"] {
     width: 90%;
     margin-top: 2vw;
     padding: 0.5vw;
-    background-color: #fcb324;
+    background-color: #409e99;
     color: #22326c;
   }
   .selection:hover p {
@@ -4970,7 +4972,7 @@ input[type="checkbox"] {
   }
   .unit {
     background-color: #22326c;
-    color: #fcb324;
+    color: #409e99;
     padding: 0.5vw 1vw;
     border-radius: 1vw;
   }
@@ -5016,7 +5018,7 @@ input[type="checkbox"] {
     width: 11.97916667vw;
     height: 11.97916667vw;
 
-    box-shadow: 0.5vw -0.5vw 0px 0vw #fcb324;
+    box-shadow: 0.5vw -0.5vw 0px 0vw #409e99;
     border: 1px solid #707070;
   }
 
@@ -5153,7 +5155,7 @@ input[type="checkbox"] {
     width: 90%;
     margin-top: 24px;
     padding: 6px;
-    background-color: #fcb324;
+    background-color: #409e99;
     color: #22326c;
   }
   .selection:hover p {
@@ -5188,7 +5190,7 @@ input[type="checkbox"] {
   }
   .unit {
     background-color: #22326c;
-    color: #fcb324;
+    color: #409e99;
     padding: 6px 12px;
     border-radius: 12px;
   }
@@ -5234,7 +5236,7 @@ input[type="checkbox"] {
     width: 143.75px;
     height: 143.75px;
 
-    box-shadow: 6px -6px 0px 0px #fcb324;
+    box-shadow: 6px -6px 0px 0px #409e99;
     border: 1px solid #707070;
   }
 

@@ -497,7 +497,7 @@ export default {
               <div>
                 <div class="second-head">
     <h1>{{ langIsSe ? "Projekt Namn" : "Projekt Namn" }}</h1>
-    <input class="long_input" placeholder="Project Name" type="text" v-model="projektNamn" />
+    <input class="long_input" placeholder="Projekt Namn" type="text" v-model="projektNamn" />
 
   </div>
     

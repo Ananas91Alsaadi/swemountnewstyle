@@ -854,7 +854,7 @@ table * {
 th {
   border: 0.0833vw solid;
   padding: 0.5vw;
-  background: linear-gradient(-90deg, rgb(24, 159, 172) 0%, rgb(107, 159, 137) 100%);
+  background: #409e99;
   color: #fff;
   border-color: #000;
   font-family: "Eurosoft W03 Medium", sans-serif;
@@ -946,4 +946,8 @@ tr:nth-child(odd) {
   width: 50%;
   padding: 1.2vw;
   margin: 1vw 22vw;
+}
+
+table * {
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

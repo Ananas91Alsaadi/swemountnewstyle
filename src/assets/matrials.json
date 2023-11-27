@@ -300,5 +300,21 @@
      "Vikt": 1.25,
      "Pris": 269,
      "Antal": 0
-    }
+    },
+    {
+        "ArtNr": "KL1400",
+        "Benämning": "Klämfäste",
+        "GS1": "-",
+        "Vikt": 0,
+        "Pris": 0,
+        "Antal": 0
+       },
+       {
+        "ArtNr": "SKL1400",
+        "Benämning": "Svart Klämfäste",
+        "GS1": "-",
+        "Vikt": 0,
+        "Pris": 0,
+        "Antal": 0
+       }
    ]
