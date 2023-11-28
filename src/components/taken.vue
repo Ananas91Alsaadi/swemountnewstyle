@@ -440,7 +440,7 @@ export default {
           },
           {
             name: "Takkrok 40mm",
-            pic: `${rootBrach}/products/TK1400l.jpg`,
+            pic: `${rootBrach}/products/TK1400.jpg`,
           },
           {
             name: "Klämfäste",
@@ -464,7 +464,7 @@ export default {
           },
           {
             name: "Takkrok 40mm",
-            pic: `${rootBrach}/products/TK1400l.jpg`,
+            pic: `${rootBrach}/products/TK1400.jpg`,
           },
           {
             name: "Klämfäste",
@@ -474,7 +474,7 @@ export default {
         [
           {
             name: "Falsfäste",
-            pic: `${rootBrach}/products/FF1400.jpg`,
+            pic: `${rootBrach}/products/FF1400.jpeg`,
           },
         ],
         [
@@ -3942,9 +3942,9 @@ console.log(this.showResult);
                       </h1>
 
                     </div>
-                    <!--          v-bind:src="'/swemounttest/shapes/' + (Takform + 1) + '.png'" 
+                    <!--          v-bind:src="'/swemountnewstyle/shapes/' + (Takform + 1) + '.png'" 
             -->
-                    <img v-bind:src="`${rootBrach}/shapes/` + (Takform + 1) + '.png'" alt="" class="shape-big-photo" />
+                    <img v-bind:src="`/swemountnewstyle/shapes/` + (Takform + 1) + '.png'" alt="" class="shape-big-photo" />
                     <div class="p3 middle-inputs-wider" style="display: flex">
                       <label for="">A <br />
                         <div class="measurement">
