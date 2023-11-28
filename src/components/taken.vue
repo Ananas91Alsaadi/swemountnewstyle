@@ -286,7 +286,7 @@ export default {
         "MA5102",
       ],
       BetongpannorKlämfäste: [
-        "TK1400",
+        "KL1400",
         "BU1200",
         "BU1201",
 
@@ -309,7 +309,7 @@ export default {
         "MA5102",
       ],
       TegelpannorKlämfäste: [
-        "TK1400",
+        "KL1400",
         "BU1200",
         "BU1201",
         "IS2450",
@@ -430,16 +430,16 @@ export default {
             pic: `${rootBrach}/products/BF1400.jpg`,
           },
 
-          {
+          /*{
             name: "Läktfäste",
             pic: `${rootBrach}/products/LF1400koplat.jpg`,
-          },
+          },*/
           {
-            name: "Takkroken",
+            name: "Takkrok 65mm",
             pic: `${rootBrach}/products/TK1400.jpg`,
           },
           {
-            name: "Takkroken lite",
+            name: "Takkrok 40mm",
             pic: `${rootBrach}/products/TK1400l.jpg`,
           },
           {
@@ -452,17 +452,18 @@ export default {
             name: "Fotplatta",
             pic: `${rootBrach}/products/TF1400.jpg`,
           },
-
+/*
           {
             name: "Läktfäste",
             pic: `${rootBrach}/products/LF1400koplat.jpg`,
           },
+          */
           {
-            name: "Takkroken",
+            name: "Takkrok 65mm",
             pic: `${rootBrach}/products/TK1400.jpg`,
           },
           {
-            name: "Takkroken lite",
+            name: "Takkrok 40mm",
             pic: `${rootBrach}/products/TK1400l.jpg`,
           },
           {
@@ -479,13 +480,13 @@ export default {
         [
           {
             name: "Lång skena",
-            pic: `${rootBrach}/products/IS2450.jpg`,
+            pic: `${rootBrach}/products/IS2450.jpeg`,
           },
         ],
         [
           {
             name: "Lång skena",
-            pic: `${rootBrach}/products/IS2450.jpg`,
+            pic: `${rootBrach}/products/IS2450.jpeg`,
           },
         ],
         [
@@ -1291,17 +1292,17 @@ console.log(this.showResult);
           .setFont("Montserrat")
           .setFontSize(9)
           .setTextColor("#22326C")
-          .text("Fabriksgatan 15", 20, 805);
+          .text("Södra Stigamovägen 7B", 20, 805);
         doc
           .setFont("Montserrat")
           .setFontSize(9)
           .setTextColor("#22326C")
-          .text("571 78 Forserum", 20, 820);
+          .text("555 92 Jönköping", 20, 820);
         doc
           .setFont("Montserrat-Bold")
           .setFontSize(10)
           .setTextColor("#22326C")
-          .text("010-300 14 10", 250, 800);
+          .text("", 250, 800);
         doc
           .setFont("Montserrat")
           .setFontSize(8)
@@ -2487,7 +2488,7 @@ console.log(this.showResult);
 
           for (let frao in this.finalResultArrObjects) {
             switch (this.finalResultArrObjects[frao].ArtNr) {
-              case "TK1400":
+              case "KL1400":
                 this.finalResultArrObjects[frao].Antal = Allfaste;
                 break;
               case "BU1200":
@@ -2913,7 +2914,7 @@ console.log(this.showResult);
 
           for (let frao in this.finalResultArrObjects) {
             switch (this.finalResultArrObjects[frao].ArtNr) {
-              case "TK1400":
+              case "KL1400":
                 this.finalResultArrObjects[frao].Antal = Allfaste;
                 break;
               case "BU1200":
@@ -3453,7 +3454,7 @@ console.log(this.showResult);
           <div class="Tak-Container">
             <div class="tak-body">
               <div class="second-head">
-                <h1>{{ langIsSe ? "Taktäckning " : "Taktäckning " }} {{ takNum + 1 }}</h1>
+                <h1>{{ langIsSe ? "Taktäckning " : "Taktäckning " }} </h1>
                 <hr />
               </div>
 
@@ -3628,7 +3629,7 @@ console.log(this.showResult);
             </div>
             <div class="tak-infast">
               <div class="second-head">
-                <h1> Infästning {{ takNum + 1 }}</h1>
+                <h1> Infästning </h1>
                 <hr />
               </div>
 
@@ -3663,6 +3664,7 @@ console.log(this.showResult);
         <div v-if="current2 === 1" class="motion-div">
 
           <div class="klammer-installningar-container">
+            <!--
             <div class="klammer-container">
               <div class="second-head">
                 <h1>
@@ -3674,7 +3676,6 @@ console.log(this.showResult);
                 <div class="selection selection-pre">
                   <img src="/products/KL2000.jpg" alt="" :class="['imgs-selects ', 1 ? ' imgs-selects-active' : '']" />
 
-                  <!--<input type="radio" :name="'klammer' + takNum" value=""checked />-->
                   <p>
                     Komplett
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-square-check white"></i>
@@ -3683,10 +3684,12 @@ console.log(this.showResult);
                 </div>
               </div>
             </div>
+-->
+
             <div class="installningar-container">
               <div class="second-head">
                 <h1>
-                  {{ langIsSe ? "Inställningar " : "Inställningar " }} {{ takNum + 1 }}
+                  {{ langIsSe ? "Inställningar " : "Inställningar " }}
                 </h1>
                 <hr />
               </div>
@@ -3744,7 +3747,7 @@ console.log(this.showResult);
             <div class="second-head">
               <h1>
                 {{ langIsSe ? "Egenskaper för tak " : "Egenskaper för tak " }}
-                {{ takNum + 1 }}
+                
               </h1>
               <hr />
             </div>
@@ -3824,7 +3827,7 @@ console.log(this.showResult);
                         ? "Takform på tilltänkt taksida "
                         : "Takform på tilltänkt taksida "
                     }}
-                    {{ takNum + 1 }}
+                    
                   </h1>
                   <hr />
                 </div>
@@ -3935,13 +3938,13 @@ console.log(this.showResult);
                     <div class="second-head">
                       <h1>
                         {{ langIsSe ? "Ange mått för taksida " : "Ange mått för taksida " }}
-                        {{ takNum + 1 }}
+                        
                       </h1>
 
                     </div>
                     <!--          v-bind:src="'/swemounttest/shapes/' + (Takform + 1) + '.png'" 
             -->
-                    <img v-bind:src="'/shapes/' + (Takform + 1) + '.png'" alt="" class="shape-big-photo" />
+                    <img v-bind:src="`${rootBrach}/shapes/` + (Takform + 1) + '.png'" alt="" class="shape-big-photo" />
                     <div class="p3 middle-inputs-wider" style="display: flex">
                       <label for="">A <br />
                         <div class="measurement">
@@ -4248,7 +4251,7 @@ console.log(this.showResult);
     <div style="display: flex">
       <div class="second-head" style="margin: 0">
         <h2 style="text-align: left; margin-top: 0">
-          Konfiguration {{ takNum + 1 }}
+          Konfiguration 
         </h2>
         <hr style="margin: 0" />
       </div>

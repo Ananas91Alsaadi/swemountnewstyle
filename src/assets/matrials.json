@@ -305,16 +305,16 @@
         "ArtNr": "KL1400",
         "Benämning": "Klämfäste",
         "GS1": "-",
-        "Vikt": 0,
-        "Pris": 0,
+        "Vikt": 0.805,
+        "Pris": 289,
         "Antal": 0
        },
        {
         "ArtNr": "SKL1400",
         "Benämning": "Svart Klämfäste",
         "GS1": "-",
-        "Vikt": 0,
-        "Pris": 0,
+        "Vikt": 0.805,
+        "Pris": 289,
         "Antal": 0
        }
    ]
